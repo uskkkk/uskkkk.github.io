@@ -81,7 +81,7 @@
 }
 
 .hambuger-top-line.active {
-  transform: rotate(45deg) translateY(10px);
+  transform: rotate(45deg) translateY(15px) translateX(7px);
 }
 
 .hambuger-middle-line.active {
@@ -89,7 +89,7 @@
 }
 
 .hambuger-bottom-line.active {
-  transform: rotate(-45deg) translateY(-10px);
+  transform: rotate(-45deg) translateY(-11px) translateX(3px);
 }
 
 @media (max-width: 991px) {
