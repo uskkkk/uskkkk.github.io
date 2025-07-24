@@ -29,6 +29,7 @@
     gap: 1.5rem;
 }
 
+/* TODO 메뉴 모듈화 */
 .navigator-menu {
     text-align: right;
     width: fit-content;

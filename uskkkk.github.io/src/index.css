@@ -4,12 +4,6 @@
   src: url("./font/Paperlogy-4Regular.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "Paperlogy-Bold";
-  font-weight: normal;
-  src: url("./font/Paperlogy-7Bold.ttf") format("truetype");
-}
-
 html,body,#root {
   font-family: 'Paperlogy-Regular';
   height: 100%;
