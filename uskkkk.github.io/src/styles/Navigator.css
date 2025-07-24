@@ -93,6 +93,10 @@
 }
 
 @media (max-width: 991px) {
+  .navigator-container {
+    padding: 0 2% 0 5%;
+  }
+
   .navigator-hambuger-toggle {
     display: flex;
   }
@@ -112,6 +116,9 @@
     justify-content: space-between;
     cursor: pointer;
     z-index: 1000;
+  }
+  .navigator-title {
+    font-size: 18px;
   }
 }
 

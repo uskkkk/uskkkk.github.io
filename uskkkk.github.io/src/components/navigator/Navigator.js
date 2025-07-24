@@ -13,10 +13,8 @@ function Navigator(props) {
       <div className="navigator-container">
         <div className="navigator-title">{props.title}</div>
 
-        <div className={`navigator-menu-box ${isOpen ? 'hidden' : ''}`}>
-          <div className="navigator-menu">{props.home}</div>
-          <div className="navigator-menu">{props.skill}</div>
-          <div className="navigator-menu">{props.contact}</div>
+        <div className={`navigator-menu-box`}>
+            {props.menu.map((m,i) => (<div key={i} className='navigator-menu'>{m}</div>))}
         </div>
 
         <div className="navigator-hambuger-toggle" onClick={toggleSidebar}>
@@ -28,9 +26,7 @@ function Navigator(props) {
 
       {/* 사이드바 */}
       <div className={`sidebar ${isOpen ? 'show' : ''}`}>
-        <div className="sidebar-menu">{props.home}</div>
-        <div className="sidebar-menu">{props.skill}</div>
-        <div className="sidebar-menu">{props.contact}</div>
+        {props.menu.map((m,i) => (<div key={i} className='sidebar-menu'>{m}</div>))}
       </div>
     </>
   );
