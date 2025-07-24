@@ -40,43 +40,84 @@
     font-size: 22px;
 }
 
+/* 기본적으로 사이드바는 숨김 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  transform: translateX(100%);  /* 완전히 오른쪽으로 숨김 */
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+/* 열렸을 때만 보임 */
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.sidebar-menu {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* 햄버거 → X로 바뀌는 애니메이션 */
 .navigator-hambuger-toggle {
-    height: 30%;
-    width: 10%;
-    display: none;
+  display: none;
 }
+
 .navigator-hambuger-toggle > div {
-    display:block;
-    width:100%;
-    height:5px;
-    border-radius: 30px;
-    background-color: black;
-    transition:all .35s;
+  height: 4px;
+  border-radius: 2px;
+  background-color: black;
+  transition: 0.3s;
 }
 
-.hambuger-top-line {
-    top: 0;
+.hambuger-top-line.active {
+  transform: rotate(45deg) translateY(10px);
 }
 
-.hambuger-middle-line {
-    top:50%;
+.hambuger-middle-line.active {
+  opacity: 0;
 }
 
-.hambuger-bottom-line {
-    bottom: 0;
+.hambuger-bottom-line.active {
+  transform: rotate(-45deg) translateY(-10px);
 }
 
-@media (max-width : 991px) {
-    .navigator-menu-box {
-        display: none;
-    }
-    .navigator-container {
-        padding: 0 2% 0 5%;
-        font-size: 18px;
-    }
-    .navigator-hambuger-toggle{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+@media (max-width: 991px) {
+  .navigator-hambuger-toggle {
+    display: flex;
+  }
+
+  .navigator-menu-box {
+    display: none !important;
+  }
+
+  .navigator-menu-box.hidden {
+    display: none;
+  }
+  .navigator-hambuger-toggle {
+    display: flex;
+    height: 30px;
+    width: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
+
+/* PC에서는 아예 안 보이도록 */
+@media (min-width: 992px) {
+  .sidebar {
+    display: none !important;
+  }
 }
