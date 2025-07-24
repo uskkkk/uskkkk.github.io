@@ -9,6 +9,11 @@ function Navigator(props) {
                 <div className='navigator-menu'>{props.skill}</div>
                 <div className='navigator-menu'>{props.contact}</div>
             </div>
+            <div className='navigator-hambuger-toggle'>
+                <div className='hambuger-top-line'></div>
+                <div className='hambuger-middle-line'></div>
+                <div className='hambuger-bottom-line'></div>
+            </div>
         </div>
     );
 }
