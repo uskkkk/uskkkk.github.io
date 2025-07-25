@@ -29,7 +29,10 @@ function Navigator(props) {
       {/* 사이드바 */}
       <div className={`sidebar ${isOpen ? 'show' : ''}`}>
         {props.menu.map(item => (
-          <a key={item.id} onClick={() => handleScroll(item.id)}>{item.label}</a>
+          <a key={item.id} onClick={() => {
+            handleScroll(item.id)
+            setIsOpen(prev => !prev);
+          }}>{item.label}</a>
         ))}
       </div>
     </>
