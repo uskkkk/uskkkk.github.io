@@ -57,3 +57,9 @@ main > section:not(:first-child) {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width : 991px) {
+  main {
+    padding: 25% 10% 0;
+  }
+}
