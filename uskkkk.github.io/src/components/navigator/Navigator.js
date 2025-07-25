@@ -14,7 +14,9 @@ function Navigator(props) {
         <div className="navigator-title">{props.title}</div>
 
         <div className={`navigator-menu-box`}>
-            {props.menu.map((m,i) => (<div key={i} className='navigator-menu'>{m}</div>))}
+            {props.menu.map(item => (
+              <a key={item.id} onClick={() => handleScroll(item.id)}>{item.label}</a>
+            ))}
         </div>
 
         <div className="navigator-hambuger-toggle" onClick={toggleSidebar}>
@@ -26,10 +28,22 @@ function Navigator(props) {
 
       {/* 사이드바 */}
       <div className={`sidebar ${isOpen ? 'show' : ''}`}>
-        {props.menu.map((m,i) => (<div key={i} className='sidebar-menu'>{m}</div>))}
+        {props.menu.map(item => (
+          <a key={item.id} onClick={() => handleScroll(item.id)}>{item.label}</a>
+        ))}
       </div>
     </>
   );
 }
+
+const handleScroll = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+  }
+};
 
 export default Navigator;

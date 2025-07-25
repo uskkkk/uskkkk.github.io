@@ -4,6 +4,10 @@
   src: url("./font/Paperlogy-4Regular.ttf") format("truetype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,body,#root {
   font-family: 'Paperlogy-Regular';
   height: 100%;

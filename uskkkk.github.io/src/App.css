@@ -29,6 +29,26 @@
   color: #61dafb;
 }
 
+main {
+  padding: 10% 10% 0 10%;
+  height: 200%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;;
+}
+
+section {
+  position: relative;       
+  z-index: 1;               
+  transform: translateZ(0); 
+  height: 100vh; 
+}
+
+main > section:not(:first-child) {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0.75rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
