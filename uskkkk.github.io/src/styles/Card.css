@@ -12,3 +12,7 @@
   padding: 16px;
   box-sizing: border-box;
 }
+
+.card-layout p {
+  width: 100%;
+}
