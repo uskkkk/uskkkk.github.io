@@ -1,0 +1,106 @@
+.sectionTitle {
+  font-size: var(--font-size-5xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contactInfo h3 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.contactInfo p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.5rem;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  transition: all var(--transition-fast);
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  background: var(--color-bg-white);
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.contactForm textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submitBtn {
+  background: var(--gradient-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 1rem 2rem;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary-lg);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .sectionTitle {
+    font-size: var(--font-size-4xl);
+  }
+
+  .contactContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: var(--font-size-3xl);
+    margin-bottom: 3rem;
+  }
+}

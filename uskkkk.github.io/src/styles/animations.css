@@ -1,0 +1,50 @@
+/* Rotate Animation - Profile Ring */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scroll Indicator Animation */
+@keyframes scroll {
+  0%, 100% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, 10px);
+    opacity: 1;
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

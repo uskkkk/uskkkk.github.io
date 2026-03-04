@@ -1,0 +1,25 @@
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  position: relative;
+  background: var(--color-bg-white);
+}
+
+.sectionAlt {
+  background: var(--color-bg-light);
+}
+
+.sectionContent {
+  max-width: var(--max-width-content);
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+}
