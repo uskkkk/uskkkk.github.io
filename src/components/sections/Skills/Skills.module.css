@@ -48,6 +48,8 @@
   padding: 0.5rem 1rem;
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
+  cursor: pointer;
+  caret-color: transparent;
 }
 
 .skillTag:hover {

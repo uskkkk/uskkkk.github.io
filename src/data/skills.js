@@ -5,11 +5,11 @@ export const skillCategories = [
   },
   {
     category: 'Backend',
-    skills: ['Node.js', 'Express', 'REST API']
+    skills: ['Node.js', 'Spring Boot', 'REST API']
   },
   {
     category: 'Tools',
-    skills: ['Git', 'GitHub', 'VS Code', 'Figma']
+    skills: ['Intellij','DataGrip','Git', 'GitHub', 'VS Code', 'Figma']
   }
 ];
 

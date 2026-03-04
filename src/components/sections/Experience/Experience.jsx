@@ -20,7 +20,15 @@ function Experience() {
                 </div>
                 <span className={styles.experiencePeriod}>{exp.period}</span>
               </div>
-              <p className={styles.experienceDescription}>{exp.description}</p>
+              {Array.isArray(exp.description) ? (
+                <ul className={styles.experienceDescription}>
+                  {exp.description.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className={styles.experienceDescription}>{exp.description}</p>
+              )}
               <div className={styles.skillTags}>
                 {exp.skills.map((skill, skillIndex) => (
                   <span key={skillIndex} className={styles.skillTag}>
