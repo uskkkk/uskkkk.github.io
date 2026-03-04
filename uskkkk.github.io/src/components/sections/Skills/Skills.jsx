@@ -1,28 +1,25 @@
-import { skills } from '../../../data';
+import { skillCategories } from '../../../data/skills';
 import Section from '../../common/Section';
 import GradientText from '../../common/GradientText';
 import styles from './Skills.module.css';
 
 function Skills() {
   return (
-    <Section id="skills">
+    <Section id="skill">
       <h2 className={styles.sectionTitle}>
-        <GradientText>Skills</GradientText>
+        <GradientText>Skill</GradientText>
       </h2>
-      <div className={styles.skillsGrid}>
-        {skills.map((skill, index) => (
-          <div key={index} className={styles.skillCard}>
-            <div className={styles.skillHeader}>
-              <span className={styles.skillName}>{skill.name}</span>
-              <span className={styles.skillCategory}>{skill.category}</span>
+      <div className={styles.skillCategories}>
+        {skillCategories.map((category, index) => (
+          <div key={index} className={styles.categoryCard}>
+            <h3 className={styles.categoryTitle}>{category.category}</h3>
+            <div className={styles.skillTags}>
+              {category.skills.map((skill, skillIndex) => (
+                <span key={skillIndex} className={styles.skillTag}>
+                  {skill}
+                </span>
+              ))}
             </div>
-            <div className={styles.skillBar}>
-              <div
-                className={styles.skillProgress}
-                style={{ width: `${skill.level}%` }}
-              ></div>
-            </div>
-            <span className={styles.skillLevel}>{skill.level}%</span>
           </div>
         ))}
       </div>

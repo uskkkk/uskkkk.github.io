@@ -1,8 +1,8 @@
 export const navigationMenu = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'contact', label: 'Contact' }
+  { id: 'skill', label: 'Skill' },
+  { id: 'experience', label: 'Experience' }
 ];
 
 export const siteTitle = 'KWS.DEV';

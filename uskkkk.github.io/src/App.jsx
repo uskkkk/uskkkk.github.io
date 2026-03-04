@@ -1,5 +1,6 @@
 import Navigator from './components/layout/Navigator';
-import { Home, About, Skills, Contact } from './components/sections';
+import Footer from './components/layout/Footer';
+import { Home, About, Skills, Experience } from './components/sections';
 import { navigationMenu, siteTitle } from './data';
 import './styles/global.css';
 
@@ -11,8 +12,9 @@ function App() {
         <Home />
         <About />
         <Skills />
-        <Contact />
+        <Experience />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -1,10 +1,16 @@
-export const skills = [
-  { name: 'React', level: 85, category: 'Frontend' },
-  { name: 'JavaScript', level: 80, category: 'Frontend' },
-  { name: 'HTML/CSS', level: 90, category: 'Frontend' },
-  { name: 'Node.js', level: 70, category: 'Backend' },
-  { name: 'Git', level: 75, category: 'Tools' },
-  { name: 'Figma', level: 65, category: 'Design' }
+export const skillCategories = [
+  {
+    category: 'Frontend',
+    skills: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind CSS']
+  },
+  {
+    category: 'Backend',
+    skills: ['Node.js', 'Express', 'REST API']
+  },
+  {
+    category: 'Tools',
+    skills: ['Git', 'GitHub', 'VS Code', 'Figma']
+  }
 ];
 
 export const aboutCards = [

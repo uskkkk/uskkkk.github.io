@@ -1,3 +1,4 @@
 export { navigationMenu, siteTitle } from './navigation';
-export { profileInfo, socialLinks, contactInfo } from './profile';
-export { skills, aboutCards } from './skills';
+export { profileInfo, socialLinks } from './profile';
+export { skillCategories, aboutCards } from './skills';
+export { experiences } from './experience';
