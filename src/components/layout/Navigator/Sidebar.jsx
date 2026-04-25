@@ -4,6 +4,7 @@ function Sidebar({ menu, isOpen, onItemClick, onClose }) {
   return (
     <>
       <div className={`${styles.sidebar} ${isOpen ? styles.show : ''}`}>
+        <div className={styles.sidebarHeader}>Navigation</div>
         <div className={styles.sidebarContent}>
           {menu.map(item => (
             <button

@@ -1,7 +1,6 @@
 import { Code, Palette, Globe } from 'lucide-react';
 import { aboutCards } from '../../../data';
 import Section from '../../common/Section';
-import GradientText from '../../common/GradientText';
 import styles from './About.module.css';
 
 const iconMap = {
@@ -13,9 +12,7 @@ const iconMap = {
 function About() {
   return (
     <Section id="about" variant="alt">
-      <h2 className={styles.sectionTitle}>
-        <GradientText>About Me</GradientText>
-      </h2>
+      <h2 className={styles.sectionTitle}>About Me</h2>
       <div className={styles.aboutGrid}>
         {aboutCards.map((card, index) => {
           const IconComponent = iconMap[card.icon];

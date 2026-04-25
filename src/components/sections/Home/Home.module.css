@@ -1,199 +1,172 @@
 .homeSection {
-  min-height: 100vh;
+  min-height: 35vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 2rem;
+  padding: calc(var(--nav-height) + 3rem) 2rem 3rem;
+  background-color: var(--color-bg-white);
+  background-image: radial-gradient(rgba(55, 53, 47, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
   position: relative;
-  background:
-    radial-gradient(ellipse at top, rgba(102, 126, 234, 0.08), transparent 50%),
-    radial-gradient(ellipse at bottom, rgba(118, 75, 162, 0.08), transparent 50%),
-    var(--color-bg-white);
 }
 
-.homeContent {
-  text-align: center;
+.homeSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(88, 101, 242, 0.05), transparent);
+  pointer-events: none;
+}
+
+.homeLayout {
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6rem;
   position: relative;
   z-index: 1;
 }
 
-.homeImageWrapper {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 2rem;
-}
-
-.gradientRing {
-  position: absolute;
-  inset: -10px;
-  border-radius: 50%;
-  background: var(--gradient-primary);
-  animation: rotate 4s linear infinite;
-  opacity: 0.4;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+/* ── Left ── */
+.homeLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
 }
 
 .profileImage {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f5f7fa, #e8ecf1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid var(--color-bg-white);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-}
-
-.imagePlaceholder {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.imagePlaceholder img {
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-xl);
   object-fit: cover;
   object-position: center;
+  border: 1px solid var(--color-border-medium);
+  box-shadow: var(--shadow-md);
+  display: block;
+}
+
+.roleLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── Right ── */
+.homeRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+  flex: 1;
 }
 
 .homeTitle {
-  font-size: var(--font-size-6xl);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--color-text-primary);
-}
-
-.homeSubtitle {
   font-size: var(--font-size-2xl);
-  color: var(--color-text-muted);
-  margin-bottom: 3rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
 }
 
-.homeInfo {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-
-.infoItem {
+/* Notion property list */
+.homeProps {
   display: flex;
   flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.propRow {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.55rem 1rem;
+  transition: background var(--transition-fast);
+}
+
+.propRow:not(:last-child) {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.propRow:hover {
+  background: var(--color-bg-light);
+}
+
+.propLabel {
+  font-size: 0.7rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.propValue {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Social links */
+.socialLinks {
+  display: flex;
   gap: 0.5rem;
 }
 
-.infoLabel {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-light);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.infoValue {
-  font-size: var(--font-size-lg);
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 500;
-}
-
-.socialLinks {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
 .socialLink {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--color-bg-gray);
-  border: 1px solid var(--color-border-medium);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border-default);
   color: var(--color-text-muted);
   text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
   transition: all var(--transition-fast);
 }
 
 .socialLink:hover {
-  background: var(--gradient-primary);
+  background: var(--color-primary);
   color: #fff;
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-primary);
-  border-color: transparent;
-}
-
-.scrollIndicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.scrollDot {
-  width: 6px;
-  height: 30px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  position: relative;
-}
-
-.scrollDot::before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 8px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 2px;
-  animation: scroll 2s infinite;
-}
-
-@keyframes scroll {
-  0%, 100% {
-    transform: translate(-50%, 0);
-    opacity: 0;
-  }
-  50% {
-    transform: translate(-50%, 10px);
-    opacity: 1;
-  }
+  border-color: var(--color-primary);
 }
 
 /* Responsive */
-@media (max-width: 968px) {
-  .homeTitle {
-    font-size: var(--font-size-5xl);
-  }
-
-  .homeInfo {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-}
-
 @media (max-width: 640px) {
   .homeSection {
-    padding: 4rem 1.5rem;
+    padding: calc(var(--nav-height) + 2rem) 1.5rem 3rem;
+    align-items: flex-start;
+  }
+
+  .homeLayout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .profileImage {
+    width: 90px;
+    height: 90px;
+  }
+
+  .homeLeft {
+    flex-direction: row;
+    align-items: center;
   }
 
   .homeTitle {
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-xl);
   }
 }

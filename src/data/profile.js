@@ -1,6 +1,7 @@
 export const profileInfo = {
   name: '김우성',
   title: 'Frontend Developer',
+  career: '경력 3년차',
   education: {
     school: '국가평생교육진흥원 학점은행',
     major: '컴퓨터공학과',

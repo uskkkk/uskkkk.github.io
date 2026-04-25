@@ -1,0 +1,17 @@
+/node_modules
+/dist
+/.env
+/.DS_Store
+/.vscode
+/coverage
+/logs
+*.log
+*.tmp
+*.bak
+# Ignore build artifacts
+/build
+/dist
+# Ignore IDE files
+/.idea
+# Ignore OS files
+/.DS_Store

@@ -1,10 +1,5 @@
 .section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6rem 2rem;
-  position: relative;
+  padding: 5rem 2rem;
   background: var(--color-bg-white);
 }
 
@@ -13,13 +8,13 @@
 }
 
 .sectionContent {
-  max-width: var(--max-width-content);
+  max-width: 760px;
   width: 100%;
   margin: 0 auto;
 }
 
 @media (max-width: 640px) {
   .section {
-    padding: 4rem 1.5rem;
+    padding: 3.5rem 1.25rem;
   }
 }

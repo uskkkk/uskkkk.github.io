@@ -1,14 +1,11 @@
 import { experiences } from '../../../data/experience';
 import Section from '../../common/Section';
-import GradientText from '../../common/GradientText';
 import styles from './Experience.module.css';
 
 function Experience() {
   return (
     <Section id="experience" variant="alt">
-      <h2 className={styles.sectionTitle}>
-        <GradientText>Experience</GradientText>
-      </h2>
+      <h2 className={styles.sectionTitle}>Experience</h2>
       <div className={styles.experienceList}>
         {experiences.map((exp, index) => (
           <div key={exp.id} className={styles.experienceItem}>
@@ -37,9 +34,6 @@ function Experience() {
                 ))}
               </div>
             </div>
-            {index < experiences.length - 1 && (
-              <div className={styles.divider}></div>
-            )}
           </div>
         ))}
       </div>
