@@ -10,9 +10,8 @@ export const profileInfo = {
 };
 
 export const socialLinks = {
-  github: '#',
-  linkedin: '#',
-  email: '#'
+  github: 'https://github.com/uskkkk',
+  email: 'mailto:dntjd4562@gmail.com'
 };
 
 export const contactInfo = {

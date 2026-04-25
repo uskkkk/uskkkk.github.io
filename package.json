@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "cd build && git init -b gh-pages && git add -A && git commit -m \"Deploy\" && git remote add origin https://github.com/uskkkk/uskkkk.github.io.git && git push origin gh-pages --force && cd .. && rm -rf build/.git"
   },
   "eslintConfig": {
     "extends": [
