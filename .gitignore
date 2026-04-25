@@ -3,8 +3,6 @@ node_modules/
 
 # production build
 build/
-static/
-asset-manifest.json
 
 # gh-pages temp clone
 uskkkk.github.io/
