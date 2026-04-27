@@ -1,6 +1,6 @@
 import Navigator from './components/layout/Navigator';
 import Footer from './components/layout/Footer';
-import { Home, About, Skills, Experience } from './components/sections';
+import { Home, About, Skills, Experience, Career } from './components/sections';
 import { navigationMenu, siteTitle } from './data';
 import './styles/global.css';
 
@@ -13,6 +13,7 @@ function App() {
         <About />
         <Skills />
         <Experience />
+        <Career />
       </main>
       <Footer />
     </div>
